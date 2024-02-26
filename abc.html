@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Images</title>
+<style>
+  /* CSS for responsive images */
+  .responsive-img {
+    width: 100%; /* Default width for all images */
+    height: auto; /* Height adjusts proportionally to width */
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+  }
+
+  @media (min-width: 768px) {
+    /* Adjust image size for larger screens */
+    .responsive-img {
+      max-width: 50%; /* Maximum width of the image is 50% of its container */
+    }
+  }
+
+  @media (min-width: 1200px) {
+    /* Adjust image size for even larger screens */
+    .responsive-img {
+      max-width: 30%; /* Maximum width of the image is 30% of its container */
+    }
+  }
+</style>
+</head>
+<body>
+  <!-- Different images for different sizes -->
+  <img class="responsive-img" src="mouse.jpeg" alt="Small Image">
+  <img class="responsive-img" src="cpu.jpeg" alt="Medium Image">
+  <img class="responsive-img" src="monitor.jpeg" alt="Large Image">
+</body>
+</html>
